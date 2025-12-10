@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:replace="${title} ?: 'Gestão de Alunos'">Gestão de Alunos</title>
+
+    <!-- CSS global -->
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" th:href="@{/css/alunos.css}" />
+</head>
+<body>
+<!-- Cabeçalho -->
+<header th:fragment="cabecalho" class="header">
+    <h1>Gestão de Alunos</h1>
+    <p>Sistema moderno para gerenciamento de alunos</p>
+</header>
+
+<!-- Navbar Fragment -->
+<nav th:fragment="navbar" class="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a th:href="@{/}">Gestão de Alunos</a>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a th:href="@{/}" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/alunos}" class="nav-link">Alunos</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/cursos}" class="nav-link">Cursos</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/ucs}" class="nav-link">UCs</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/h2-console}" class="nav-link" target="_blank">Banco H2</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Rodapé -->
+<footer th:fragment="rodape" class="footer">
+    <p>Desenvolvido por Alexandre, Katherine, Paulo - TI-931 CENCAL</p>
+    <p>Sistema de Gestão de Alunos - Versão 2.0</p>
+</footer>
+</body>
+</html>
